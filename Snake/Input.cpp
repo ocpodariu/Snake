@@ -21,9 +21,9 @@
  */
 char Input::readInput() {
 
-	if (kbhit()) {
-		char ch = getch();
-		if (ch == 0) ch = getch();
+	if (_kbhit()) {
+		char ch = _getch();
+		if (ch == 0) ch = _getch();
 		return ch;
 	}
 	else
