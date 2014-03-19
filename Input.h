@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+/**----------------------------------------------------------------
  *  Author:        Ovidiu PODARIU
  *  Date:          17-Mar-2014
  *
@@ -13,7 +13,7 @@ class Input {
 
 public:
 
-	/*
+	/**
 	 * Check if the user has pressed any key.
 	 * If he hasn't, return 0.
 	 * Else return the key that was pressed. If a special

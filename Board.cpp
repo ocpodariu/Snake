@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+/**----------------------------------------------------------------
  *  Author:        Ovidiu PODARIU
  *  Date:          19-Mar-2014
  *
@@ -18,7 +18,7 @@ Board::Board() {
 }
 
 int Board::getXY(int x, int y) {
-	
+
 	if (isValidXY(x, y))
 		return board[x][y];
 	else

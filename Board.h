@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+/**----------------------------------------------------------------
  *  Author:        Ovidiu PODARIU
  *  Date:          19-Mar-2014
  *
@@ -7,14 +7,14 @@
  *
  *----------------------------------------------------------------*/
 
-// The board's maximum widht and height.
+/// The board's maximum widht and height.
 const unsigned int MAX_LINES   = 15;
 const unsigned int MAX_COLUMNS = 15;
 
 class Board {
 
 private:
-	/*
+	/**
 	 * The actual board - a 2D matrix.
 	 * Its elements can have one of the following values:
 	 *		- 0 -> if the cell is empty
@@ -25,12 +25,12 @@ private:
 
 public:
 
-	/*
+	/**
 	 * The constructor intializes all cells with 0.
 	 */
 	Board();
 
-	/*
+	/**
 	 * Returns the element with the X and Y coordinates.
 	 * @param the X coordinate
 	 * @param the Y coordinate
@@ -39,7 +39,7 @@ public:
 	 */
 	int getXY(int, int);
 
-	/*
+	/**
 	 * Sets the value of the element with the X and Y coordinates.
 	 * @param the X coordinate
 	 * @param the Y coordinate
@@ -47,7 +47,7 @@ public:
 	 */
 	void setXY(int, int, unsigned int);
 
-	/*
+	/**
 	 * Check whether X and Y represent valid coordinates.
 	 * @param the X coordinate
 	 * @param the Y coordinate
