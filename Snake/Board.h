@@ -34,15 +34,18 @@ public:
 	 * Returns the element with the X and Y coordinates.
 	 * @param the X coordinate
 	 * @param the Y coordinate
-	 * @return the element's value(0, 1 or 2)
+	 * @return the element's value - if it's a valid position
+	 *         -1                  - otherwise
 	 */
-	unsigned int getXY(int, int);
+	int getXY(int, int);
 
 	/*
 	 * Sets the value of the element with the X and Y coordinates.
+	 * @param the X coordinate
+	 * @param the Y coordinate
 	 * @param the new value of the element
 	 */
-	void setXY(unsigned int);
+	void setXY(int, int, unsigned int);
 
 	/*
 	 * Check whether X and Y represent valid coordinates.
