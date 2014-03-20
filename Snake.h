@@ -54,6 +54,39 @@ private:
 	 */
 	unsigned int score;
 
+    /**
+	 * Calculates the next position of the snake
+	 * (the X coordinate) based on its current direction.
+	 */
+	int newXCoord();
+
+    /**
+	 * Calculates the next position of the snake
+	 * (the Y coordinate) based on its current direction.
+	 */
+	int newYCoord();
+
+    /**
+	 * Resets the snake to its original state
+	 * (length = 1 and a random position).
+	 */
+	void reset();
+
+	/**
+	 * When the snake hits a "wall" it loses 1 life.
+	 * This method decrements the number of lives
+	 * and returns whether the snake is still alive.
+	 * @return TRUE  - if lives > 0
+	 *         FALSE - otherwise
+	 */
+	bool loseLife();
+
+	/**
+	 * Updates the board with the snake's current
+	 * coordinates.
+	 */
+	void updateBoard();
+
 public:
 
     /**
