@@ -7,6 +7,9 @@
  *
  *----------------------------------------------------------------*/
 
+#ifndef BOARD_H_INCLUDED
+#define BOARD_H_INCLUDED
+
 /// The board's maximum widht and height.
 const unsigned int MAX_LINES   = 15;
 const unsigned int MAX_COLUMNS = 15;
@@ -57,3 +60,5 @@ public:
 	bool isValidXY(int, int);
 
 };
+
+#endif // BOARD_H_INCLUDED
