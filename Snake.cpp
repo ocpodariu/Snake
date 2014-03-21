@@ -49,7 +49,7 @@ void Snake::move() {
     // check if the next position is occupied by a food item
     if (board.getXY(tempX, tempY) == 2) {
         // the snake grows by 1 segment
-        lenght++;
+        length++;
 
         // update the coordinates of the snake's segments
         for (int i = length - 1; i > 0; i--) {
@@ -125,6 +125,24 @@ bool Snake::loseLife() {
     if (lives == 0)
         return false;
     return true;
+
+}
+
+int Snake::newXCoord() {
+
+    if (direction == 'H') return coord[0][0] - 1;
+    else if (direction == 'P') return coord[0][0] + 1;
+         else if (direction == 'K') return coord[0][0];
+              else if (direction == 'M') return coord[0][0];
+
+}
+
+int Snake::newYCoord() {
+
+    if (direction == 'H') return coord[0][1];
+    else if (direction == 'P') return coord[0][1];
+         else if (direction == 'K') return coord[0][1] - 1;
+              else if (direction == 'M') return coord[0][1] + 1;
 
 }
 
