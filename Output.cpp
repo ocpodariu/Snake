@@ -31,7 +31,7 @@
     clearScreen();
 
     if (score == 0)
-        printf("Sorry, better luck next time...");
+        printf("Sorry, better luck next time...\n");
     else
         printf("Congratulations! You obtained a total score of %d.\n", score);
 

@@ -40,8 +40,10 @@ void Snake::move() {
     // check if the next position is a wall
     // (not a valid position) => the snake dies
     if (!board.isValidXY(tempX, tempY)) {
-        if (loseLife())
+        if (loseLife()) {
             reset();
+            return ;
+        }
         else
             return ;
     }
@@ -101,6 +103,10 @@ void Snake::changeDirection(char newDirection) {
 }
 
 void Snake::reset() {
+
+    // "delete" the current snake
+    for (int i = 0; i < length; i++)
+        board.setXY(coord[i][0], coord[i][1], 0);
 
     length = 1;
 
