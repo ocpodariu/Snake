@@ -34,8 +34,8 @@ void Food::generateFood() {
     // board[tempX][tempY] = 0; is a free position
     do {
 
-        tempX = rand(MAX_LINES);
-        tempY = rand(MAX_COLUMNS);
+        tempX = rand() % MAX_LINES;
+        tempY = rand() % MAX_COLUMNS;
 
     }
     while (board.getXY(tempX, tempY));
