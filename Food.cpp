@@ -16,7 +16,7 @@ Food::Food(Board& newBoard): board(newBoard) {  }
 bool Food::isEaten() {
 
     // the value of a food item on the board is 2
-    if (board.getXY(x, y) != 2)
+    if (board.getXY(x, y) == 2)
         return false;
     return true;
 
