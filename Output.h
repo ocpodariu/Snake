@@ -38,6 +38,12 @@ public:
      */
     void showResults(unsigned int);
 
+    /**
+     * Clears the screen.
+     * ("Erases" the previous board.)
+     */
+    void clearScreen();
+
 };
 
 #endif // OUTPUT_H_INCLUDED

@@ -9,10 +9,13 @@
 
  #include "Output.h"
  #include <stdio.h>
+ #include <stdlib.h>    // system("cls");
 
  Output::Output(Board& newBoard): board(newBoard) {   }
 
  void Output::updateBoard() {
+
+    clearScreen();
 
     for (int i = 0; i < MAX_LINES; i++) {
         for (int j = 0; j < MAX_COLUMNS; j++) {
@@ -25,9 +28,17 @@
 
  void Output::showResults(unsigned int score) {
 
+    clearScreen();
+
     if (score == 0)
         printf("Sorry, better luck next time...");
     else
-        printf("Congratulations! You obtained a total score of %d.", score);
+        printf("Congratulations! You obtained a total score of %d.\n", score);
+
+ }
+
+ void Output::clearScreen() {
+
+    system("cls");
 
  }
