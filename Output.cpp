@@ -17,12 +17,29 @@
 
     clearScreen();
 
-    for (int i = 0; i < MAX_LINES; i++) {
-        for (int j = 0; j < MAX_COLUMNS; j++) {
-            printf("%d", board.getXY(i, j));
+    int i, j;
+
+    // Create a border around the board
+    for (i = 0; i < MAX_LINES + 2; i++)
+        printf("%c", 177);
+
+    printf("\n");
+
+    for (i = 0; i < MAX_LINES; i++) {
+        printf("%c", 177);
+        for (j = 0; j < MAX_COLUMNS; j++) {
+            switch (board.getXY(i, j)) {
+                case 0: { printf(" "); break; }
+                case 1: { printf("X"); break; }
+                case 2: { printf("%c", 232); break; }
+            }
         }
+        printf("%c", 177);
         printf("\n");
     }
+
+    for (i = 0; i < MAX_LINES + 2; i++)
+        printf("%c", 177);
 
  }
 
