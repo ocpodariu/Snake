@@ -65,6 +65,9 @@ void Snake::move() {
         // the previous snake on the board and add only
         // one extra segment.
         board.setXY(coord[0][0], coord[0][1], 1);
+
+        // Add 10 points to the player's score.
+        score += 10;
     }
     else {
         // Because the snake hasn't grown, its tail
