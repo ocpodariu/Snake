@@ -33,13 +33,14 @@ Snake::Snake(Board& newBoard): board(newBoard) {
 
 void Snake::move() {
 
-    // the snake's head new coordinates
+    // The snake's head new coordinates
     int tempX = newXCoord();
     int tempY = newYCoord();
 
-    // check if the next position is a wall
-    // (not a valid position) => the snake dies
-    if (!board.isValidXY(tempX, tempY)) {
+    // Check if the next position is a wall
+    // (not a valid position) or a segment of the snake
+    // => the snake dies
+    if (!board.isValidXY(tempX, tempY) || board.getXY(tempX, tempY) == 1) {
         if (loseLife()) {
             reset();
             return ;
@@ -48,12 +49,12 @@ void Snake::move() {
             return ;
     }
 
-    // check if the next position is occupied by a food item
+    // Check if the next position is occupied by a food item
     if (board.getXY(tempX, tempY) == 2) {
-        // the snake grows by 1 segment
+        // The snake grows by 1 segment
         length++;
 
-        // update the coordinates of the snake's segments
+        // Update the coordinates of the snake's segments
         for (int i = length - 1; i > 0; i--) {
             coord[i][0] = coord[i-1][0];
             coord[i][1] = coord[i-1][1];
