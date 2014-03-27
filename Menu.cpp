@@ -89,6 +89,14 @@
 
  }
 
+ void Menu::displayCounter(unsigned int sec) {
+
+     clearScreen();
+
+     printf("\n\n\t The game starts in... %d", sec);
+
+ }
+
  void Menu::clearScreen() {
 
      system("cls");

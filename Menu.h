@@ -79,6 +79,11 @@ public:
     void displayInstructions();
 
     /**
+     * Displays a counter before the start of the game.
+     */
+    void displayCounter(unsigned int);
+
+    /**
      * Clears the screen.
      */
     void clearScreen();

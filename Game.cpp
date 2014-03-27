@@ -31,6 +31,9 @@ int main() {
 
 	do {
 
+        // "reset" the menu
+        menu.resetMenu();
+
         do {
             menu.changeOption(input.readInput());
             menu.displayMenu();
@@ -83,6 +86,10 @@ int main() {
                     if (kbhit())
                         break;
 
+                // call getch() to "clear" the buffer
+                // ("delete" the key that was pressed)
+                getch();
+
                 break;
 
             }
@@ -95,6 +102,10 @@ int main() {
                 while(true)
                     if (kbhit())
                         break;
+
+                // call getch() to "clear" the buffer
+                // ("delete" the key that was pressed)
+                getch();
 
                 break;
 
