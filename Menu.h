@@ -33,6 +33,13 @@ private:
      */
     unsigned int nrOfOptions;
 
+    /**
+     * The id (index) of the currently
+     * selected option.
+     */
+    unsigned int currentOption;
+
+
 public:
 
     /**
