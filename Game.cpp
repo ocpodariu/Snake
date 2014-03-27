@@ -54,6 +54,11 @@ int main() {
                 Snake snake(board);
                 Food food(board);
 
+                for (int i = 3; i > 0; i--) {
+                    menu.displayCounter(i);
+                    Sleep(1000);
+                }
+
                 do {
 
                     snake.changeDirection(input.readInput());
