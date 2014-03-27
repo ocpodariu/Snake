@@ -99,6 +99,12 @@ public:
      */
     char getLastCommand();
 
+    /**
+     * "Resets" the menu. Sets the currently selected
+     * option to "New game" and the lastCommand to
+     * a random character.
+     */
+    void resetMenu();
 
 };
 

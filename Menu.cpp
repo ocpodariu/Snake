@@ -110,6 +110,18 @@
 
  }
 
+ void Menu::resetMenu() {
+
+    currentOption = 0;
+
+    options[0].selected = true;
+    options[1].selected = false;
+    options[2].selected = false;
+
+    lastCommand = 's';
+
+ }
+
  unsigned int Menu::getCurrentOption() { return currentOption; }
 
  char Menu::getLastCommand() { return lastCommand; }
