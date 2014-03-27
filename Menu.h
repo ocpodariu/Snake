@@ -9,6 +9,10 @@
 #ifndef MENU_H_INCLUDED
 #define MENU_H_INCLUDED
 
+// The key-codes used to verify the user's input
+#define UP    72
+#define DOWN  80
+
 class Menu {
 
 private:
@@ -39,6 +43,12 @@ private:
      */
     unsigned int currentOption;
 
+    /**
+     * Stores the last command received from
+     * the user.
+     */
+    char lastCommand;
+
 
 public:
 
@@ -48,24 +58,29 @@ public:
     Menu();
 
     /**
-	* Display the main menu of the game:
-	* title + options.
-	*/
+     * Display the main menu of the game:
+     * title + options.
+     */
     void displayMenu();
 
     /**
-	* Displays the title of the game.
-	*/
+     * Displays the title of the game.
+     */
     void displayTitle();
 
     /**
-	* Displays the options of the menu.
-	*/
+     * Displays the options of the menu.
+     */
     void displayOptions();
 
     /**
-	* Clears the screen.
-	*/
+     * Displays the instructions - how to play the game.
+     */
+    void displayInstructions();
+
+    /**
+     * Clears the screen.
+     */
     void clearScreen();
 
     /**
@@ -73,6 +88,17 @@ public:
      * @param the direction towards the desired option
      */
     void changeOption(char);
+
+    /**
+     * @return the id of the currently selected option
+     */
+    unsigned int getCurrentOption();
+
+    /**
+     * @return last command received from the user
+     */
+    char getLastCommand();
+
 
 };
 

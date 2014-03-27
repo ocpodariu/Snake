@@ -19,6 +19,8 @@
     options[1].name = (char*) "How to play";
     options[2].name = (char*) "Exit";
 
+    currentOption = 0;
+
     // Initially, "New game" is selected
     options[0].selected = true;
     options[1].selected = false;
@@ -64,6 +66,29 @@
 
  }
 
+ void Menu::displayInstructions() {
+
+     clearScreen();
+
+     printf("\n\n");
+
+     displayTitle();
+
+     printf("\n\n\n");
+
+     printf("\t\t      How to play \n");
+     printf("\t\t      =========== \n\n\n");
+     printf("\t     The objective of the game is to eat\n");
+     printf("\t as many food items as possible and     \n");
+     printf("\t avoid hitting the walls.               \n");
+     printf("\t     Each food items gives you 10 points\n");
+     printf("\t and you have 3 lives - 3 chances to get\n");
+     printf("\t more points - before the game ends.    \n");
+
+     printf("\n\n\n");
+
+ }
+
  void Menu::clearScreen() {
 
      system("cls");
@@ -71,6 +96,8 @@
  }
 
  void Menu::changeOption(char direction) {
+
+     lastCommand = direction;
 
      if (direction == UP && currentOption != 0) {
         options[currentOption].selected = false;
@@ -82,3 +109,7 @@
      }
 
  }
+
+ unsigned int Menu::getCurrentOption() { return currentOption; }
+
+ char Menu::getLastCommand() { return lastCommand; }
